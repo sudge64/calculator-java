@@ -31,11 +31,16 @@ class calculator{
             return x%y;
         }
     }
+
+    static double power(double x, double y){
+        return Math.pow(x, y);
+    }
+
     public static void main(String args[]){
         double choice, x, y;
         Scanner read = new Scanner(System.in);
         for(;;){
-            System.out.println("Calculator Program.\nPlease enter a selection for the mathematic operation to be performed and two doubleerger values\n1.) Addition\n2.) Subtraction\n3.) Multiplcation\n4.) Division\n5.) Modular Division\n6.) Exit\nSelection : ");
+            System.out.println("Calculator Program.\nPlease enter a selection for the mathematic operation to be performed and two doubleerger values\n1.) Addition\n2.) Subtraction\n3.) Multiplcation\n4.) Division\n5.) Modular Division\n6.) Raise x to the power y\n7.) Exit\nSelection : ");
             choice = read.nextDouble();
             System.out.println("Enter first non-negative double value : ");
             x = read.nextDouble();
@@ -59,6 +64,9 @@ class calculator{
                 System.out.println("Result : "+modulo(x,y)+"\n");
                 break;
             case 6:
+                System.out.println("Result : "+power(x,y)+"\n");
+                break;
+            case 7:
                 System.exit(0);
             default:
                 System.out.println("Selection invalid.\n");
